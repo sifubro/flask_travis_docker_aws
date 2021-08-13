@@ -12,6 +12,9 @@ from flask import Flask, render_template, request
 #model = MobileNetV2()
 app = Flask(__name__)
 
+@app.route('/health', methods=['GET'])
+def health():
+    return 200
 
 @app.route('/', methods=['GET'])
 def hello_world():
