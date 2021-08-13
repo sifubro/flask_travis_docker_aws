@@ -41,7 +41,7 @@ def predict():
     # #classification = "%s (%.2f%%)" %(label1[1], label1[2]*100)
     # classification = "{}:{}%  ,  {}:{}%  ,  {}:{}%".format(label1[1], round(label1[2]*100,2),label2[1], round(label2[2]*100,2), label3[1], round(label3[2]*100,2) )
 
-    return render_template('index.html', prediction='Not Implemented Yet!')
+    return render_template('index.html', prediction='NONE!')
 
 if __name__ == '__main__':
     #https://stackoverflow.com/questions/28241989/flask-app-restarting-with-stat
