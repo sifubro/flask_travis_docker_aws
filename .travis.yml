@@ -1,18 +1,15 @@
-language: python
-python: 3.7
-
 sudo: required
 services:
   - docker
-
+  
 before_install:
-  - python --version
-  - pip install -U pip
   - docker build -t sifubro/first_image_test_travis -f Dockerfile .
-
+  
 install:
   - pip install -r requirements.txt
 
 script:
   - python -m pytest -v tests/test_app.py
   
+after_success:
+  - sh .travis/deploy_dockerhub.sh

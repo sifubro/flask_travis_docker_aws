@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+  
+before_install:
+  - docker build -t sifubro/first_image_test_travis -f Dockerfile .
+
+script:
+  - docker run sifubro/first_image_test_travis npm run test -- --coverage
+  
