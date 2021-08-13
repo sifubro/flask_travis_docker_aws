@@ -1,0 +1,43 @@
+HOST LOCALLY WITH DOCKER
+========================
+
+list images: docker images
+list containers: docker ps
+
+remove image: docker image rm -f 391399456188
+remove container: docker rm -f 391399456188
+
+# BUILD
+docker build -t docker_flask_api .
+
+# RUN !!!!!!! REMEMBER THE PORT
+docker run --rm -ip 3000:3000 --name docker_flask_api_container docker_flask_api
+
+========================================================================================
+
+HOST IN AWS
+===========
+
+# tagging iamges before pusing to dockerhub
+docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]
+
+# docker login
+sifubro
+a270188ma$$$
+
+# push to docker hub
+docker push <hub-user>/<repo-name>:<tag>
+
+# pulling image from docker hub
+docker.io/library/mysql:latest
+docker.io/sifubro/first_image_test:v1
+
+# Pushing docker image to dockerHub
+https://docs.docker.com/docker-hub/repos/#:~:text=To%20push%20an%20image%20to,docs%2Fbase%3Atesting%20).
+
+#deploying
+#https://reflectoring.io/aws-deploy-docker-image-via-web-console/
+see also
+!!!!!!!!!!!!The AWS Journey Part 1_ Deploying Your First Docker Image - Reflectoring
+
+
