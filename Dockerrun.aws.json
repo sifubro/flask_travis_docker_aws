@@ -5,7 +5,7 @@
           "name": "flask-app",
           "image": "sifubro/flask_travis_docker_aws:latest",
           "essential": true, 
-          "portMappings"=[
+          "portMappings":[
             {
               "containerPort":3000,
               "hostPort": 3000
