@@ -18,3 +18,15 @@ script:
   
 after_success:
   - sh .travis/deploy_dockerhub.sh
+  
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: docker-flask-app
+  env: Dockerflaskapp-env
+  bucket_name: elasticbeanstalk-us-east-2-587265619337
+  bucket_path: docker-flask-app
+  on:
+    branch: master
+  access_key_id: $AWS_EBS_ACCESS_KEY
+  secret_access_key: $AWS_EBS_SECRET_KEY
