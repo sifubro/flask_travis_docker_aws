@@ -1,6 +1,8 @@
 # STEP 1: Install base image. Optimized for Python.
 FROM python:3.7-slim-buster
 
+MAINTAINER sifubro theokasio@gmail.com
+
 # Step 2: Add requirements.txt file 
 COPY requirements.txt /requirements.txt
 
