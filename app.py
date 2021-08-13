@@ -22,9 +22,9 @@ def hello_world():
 
 @app.route('/', methods=['POST'])
 def predict():
-    imgfile = request.files['image_file']
-    imgpath = "./images/" + imgfile.filename
-    imgfile.save(imgpath)
+    #imgfile = request.files['image_file']
+    #imgpath = "./images/" + imgfile.filename
+    #imgfile.save(imgpath)
 
     #224 for vgg16 and mobilenet
     #299 for xception
